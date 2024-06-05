@@ -38,6 +38,8 @@ public class UserController {
         if(users.isEmpty()){
             throw new UserNotfoundException("User with id " + id + " not found");
         }
+
+
         return users;
     }
 
