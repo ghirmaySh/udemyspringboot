@@ -28,7 +28,8 @@ public class UserController {
 
 
     @GetMapping("/users")
-    public List getUsers(){    
+    public List getUsers(){
+        //another change from getall users
         return userRepository.findAll();
     }
     @GetMapping("/users/{id}")
@@ -38,6 +39,7 @@ public class UserController {
         if(users.isEmpty()){
             throw new UserNotfoundException("User with id " + id + " not found");
         }
+        //that is a change from local controller
         return users;
     }
 
